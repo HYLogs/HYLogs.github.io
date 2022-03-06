@@ -23,13 +23,13 @@ title: "파이썬으로 이더리움 테스트넷 Dapp 만들기"
 
 다른 에디터가 있으신 분들은 해당 에디터를 사용하셔도 됩니다.
 
-![instaall_VSCode](../images/2022-03-07-Blockchain/Install_VSCode.PNG)
+![instaall_VSCode](../images/2022-02-25-Blockchain/Install_VSCode.PNG)
 
 먼저 https://code.visualstudio.com/download 에서 본인 OS에 맞게 다운로드를 해줍니다.
 
 <br/>
 
-![setup_VSCode](../images/2022-03-07-Blockchain/setup_VSCode.PNG)
+![setup_VSCode](../images/2022-02-25-Blockchain/setup_VSCode.PNG)
 
 설치 하실때에 해당 두 칸은 꼭 체크를 해주세요!
 
