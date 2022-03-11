@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "파이썬으로 이더리움 테스트넷 Dapp 만들기"
+toc: true
+toc_sticky: true
 categories: 
     - BlockChain
 ---
