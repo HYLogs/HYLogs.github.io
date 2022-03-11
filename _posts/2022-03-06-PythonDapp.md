@@ -23,13 +23,13 @@ title: "파이썬으로 이더리움 테스트넷 Dapp 만들기"
 
 다른 에디터가 있으신 분들은 해당 에디터를 사용하셔도 됩니다.
 
-![instaall_VSCode](../images/2022-03-06-Blockchain/Install_VSCode.PNG)
+![instaall_VSCode](../images/2022-03-06-PythonDapp/Install_VSCode.PNG)
 
 먼저 https://code.visualstudio.com/download 에서 본인 OS에 맞게 다운로드를 해줍니다.
 
 <br/>
 
-![setup_VSCode](../images/2022-03-06-Blockchain/setup_VSCode.PNG)
+![setup_VSCode](../images/2022-03-06-PythonDapp/setup_VSCode.PNG)
 
 설치 하실때에 해당 두 칸은 꼭 체크를 해주세요!
 
@@ -37,13 +37,13 @@ title: "파이썬으로 이더리움 테스트넷 Dapp 만들기"
 
 <br/>
 
-![expansion_python](../images/2022-03-06-Blockchain/expansion_python.PNG)
+![expansion_python](../images/2022-03-06-PythonDapp/expansion_python.PNG)
 
 VScode를 설치한 후 python 확장팩을 설치해줍니다.
 
 <br/>
 
-![expansion_solidity](../images/2022-03-06-Blockchain/expansion_solidity.PNG)
+![expansion_solidity](../images/2022-03-06-PythonDapp/expansion_solidity.PNG)
 
 추가로 Solidity 확장팩도 필요하신 분은 다운해주세요.
 
@@ -71,7 +71,7 @@ https://www.python.org/downloads/
 ## 2.3 node.js 설치
 Truffle 프레임 워크 사용을 하기 때문에 node.js를 설치 해줍니다.
 
-![node_js](../images/2022-03-06-Blockchain/node_js.png)
+![node_js](../images/2022-03-06-PythonDapp/node_js.png)
 
 node.js 홈페이지를 검색하셔서 다운로드 해주세요. 링크도 걸어두겠습니다.
 
@@ -83,7 +83,7 @@ Node.js: https://nodejs.org/ko/
 ## 2.4 Truffle 설치
 Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트랙트 생성 및 테스트를 도와주는 프레임 워크이므로 설치를 해줍니다.
 
-![install_truffle](../images/2022-03-06-Blockchain/install_truffle.PNG)
+![install_truffle](../images/2022-03-06-PythonDapp/install_truffle.PNG)
 
 명령 프롬프트를 실행시켜주시고 "npm install -g truffle" 명령어를 입력해서 설치를 해줍니다.
 
@@ -93,19 +93,19 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 ## 2.5 web3.py 설치
 파이썬에서 스마트컨트랙트를 쉽게 이용할 수 있게 함수들을 만들어 놓은 web3.py를 설치해주어야합니다.
 
-![install_pip](../images/2022-03-06-Blockchain/install_pip.PNG)
+![install_pip](../images/2022-03-06-PythonDapp/install_pip.PNG)
 
 먼저 "npm i pip"를 입력해서 pip를 설치해 줍니다.
 
 <br/>
 
-![upgrade_pip](../images/2022-03-06-Blockchain/upgrade_pip.PNG)
+![upgrade_pip](../images/2022-03-06-PythonDapp/upgrade_pip.PNG)
 
 "python -m pip install --upgrade pip"를 입력해서 pip를 최신으로 업그레이드 해줍니다.
 
 <br/>
 
-![install_web3](../images/2022-03-06-Blockchain/install_web3.PNG)
+![install_web3](../images/2022-03-06-PythonDapp/install_web3.PNG)
 
 "pip install web3"를 입력 후 설치.
 
@@ -115,7 +115,7 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 ## 2.6 flask 설치
 스마트 컨트랙트에 데이터를 넣고 확인하는 방법을 브라우저로 확인하기 위해서 웹 프레임 워크인 falsk를 설치해줍니다.
 
-![install_flask](../images/2022-03-06-Blockchain/install_flask.PNG)
+![install_flask](../images/2022-03-06-PythonDapp/install_flask.PNG)
 
 "pip install falsk" 립력 후 설치.
 
@@ -124,31 +124,31 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 
 ## 2.7 Metamask 설치 및 이더 받기
 
-![install_metamask](../images/2022-03-06-Blockchain/install_metamask.PNG)
+![install_metamask](../images/2022-03-06-PythonDapp/install_metamask.PNG)
 
 구글 크롬에서 확장프로그램 Metamsk를 다운해주세요
 
 <br/>
 
-![check_metamask](../images/2022-03-06-Blockchain/check_metamask.PNG)
+![check_metamask](../images/2022-03-06-PythonDapp/check_metamask.PNG)
 
 이 화면까지 되셨으면 설치 되신겁니다.
 
 <br/>
 
-![Newacc1_metamask](../images/2022-03-06-Blockchain/Newacc1_metamask.PNG)
+![Newacc1_metamask](../images/2022-03-06-PythonDapp/Newacc1_metamask.PNG)
 
 이제 테스트로 거래 할 계정을 만들어주겠습니다.
 
 <br/>
 
-![Newacc2_metamask](../images/2022-03-06-Blockchain/Newacc2_metamask.PNG)
+![Newacc2_metamask](../images/2022-03-06-PythonDapp/Newacc2_metamask.PNG)
 
 저는 이름을 test로 하겠습니다. 이름은 아무거나 하셔도 상관없습니다.
 
 <br/>
 
-![Newacc3_metamask](../images/2022-03-06-Blockchain/Newacc3_metamask.PNG)
+![Newacc3_metamask](../images/2022-03-06-PythonDapp/Newacc3_metamask.PNG)
 
 저는 Ropsten 테스트넷을 기준으로 했기 때문에 Ropsten으로 설명드리겠습니다.
 
@@ -156,25 +156,25 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 
 <br/>
 
-![Newacc4_metamask](../images/2022-03-06-Blockchain/Newacc4_metamask.PNG)
+![Newacc4_metamask](../images/2022-03-06-PythonDapp/Newacc4_metamask.PNG)
 
 만약 테스트넷이  이미지와 같이 안보이시면 계정 아이콘을 누르시고 설정-고급-테스트 네트워크 보기를 활성화해주시면 됩니다.
 
 <br/>
 
-![testEth1_metamask](../images/2022-03-06-Blockchain/testEth1_metamask.PNG)
+![testEth1_metamask](../images/2022-03-06-PythonDapp/testEth1_metamask.PNG)
 
 이제 테스트넷을 이용할 때 사용되는 이더를 받아야 하기 때문에 해당 사이트에서 지갑 주소를 입력 해주어야 합니다.
 
 <br/>
 
-![testEth2_metamask](../images/2022-03-06-Blockchain/testEth2_metamask.PNG)
+![testEth2_metamask](../images/2022-03-06-PythonDapp/testEth2_metamask.PNG)
 
 Metamask를 열어 주신 다음에 빨간 네모칸을 눌러주시면 지갑 주소가 복사됩니다.
 
 <br/>
 
-![testEth3_metamask](../images/2022-03-06-Blockchain/testEth3_metamask.PNG)
+![testEth3_metamask](../images/2022-03-06-PythonDapp/testEth3_metamask.PNG)
 
 사이트에 붙여넣기를 하신다음 Send Ropsten ETH를 받습니다.
 
@@ -186,31 +186,31 @@ Metamask를 열어 주신 다음에 빨간 네모칸을 눌러주시면 지갑 �
 
 먼저 https://infura.io/ 에서 회원가입을 해줍니다.
 
-![infura1](../images/2022-03-06-Blockchain/infura1.PNG)
+![infura1](../images/2022-03-06-PythonDapp/infura1.PNG)
 
 가입 후 대쉬보드를 열어줍니다.
 
 <br/>
 
-![infura2](../images/2022-03-06-Blockchain/infura2.PNG)
+![infura2](../images/2022-03-06-PythonDapp/infura2.PNG)
 
 "CREATE NEW PROTJECT"를 눌러줍니다.
 
 <br/>
 
-![infura3](../images/2022-03-06-Blockchain/infura3.PNG)
+![infura3](../images/2022-03-06-PythonDapp/infura3.PNG)
 
 PRODUCT는 이더리움으로 해주고 프로젝트 이름은 아무거나 하셔도 됩니다.
 
 <br/>
 
-![infura4](../images/2022-03-06-Blockchain/infura4.PNG)
+![infura4](../images/2022-03-06-PythonDapp/infura4.PNG)
 
 ENDPOINTS를 저희가 사용할 Ropsten으로 해줍니다.
 
 <br/>
 
-![infura5](../images/2022-03-06-Blockchain/infura5.PNG)
+![infura5](../images/2022-03-06-PythonDapp/infura5.PNG)
 
 해당 주소가 저희가 나중에 사용할 API 키입니다.
 
@@ -221,37 +221,37 @@ ENDPOINTS를 저희가 사용할 Ropsten으로 해줍니다.
 
 저는 바탕화면에 blockchain 폴더를 생성 후 해당 폴더에서 작업을 하도록 하겠습니다.
 
-![OpenVSCode](../images/2022-03-06-Blockchain/OpenFolder.png)
+![OpenVSCode](../images/2022-03-06-PythonDapp/OpenFolder.png)
 
 작업 할 폴더에서 오른쪽키를 클릭 후 "Code(으)로 열기"를 클릭합니다.
 
 <br/>
 
-![OpenTerminal](../images/2022-03-06-Blockchain/OpenTerminal.PNG)
+![OpenTerminal](../images/2022-03-06-PythonDapp/OpenTerminal.PNG)
 
 켜진 후 터미널을 키기 위해서 Ctrl+Shift+` 를 눌러줍니다.
 
 <br/>
 
-![OpenCmd](../images/2022-03-06-Blockchain/OpenCmd.png)
+![OpenCmd](../images/2022-03-06-PythonDapp/OpenCmd.png)
 
 기본적으로 "powershell"이 켜지게 되어있을 텐데 "Command Prompt"로 켜줍니다.
 
 <br/>
 
-![initTruffle](../images/2022-03-06-Blockchain/initTruffle.PNG)
+![initTruffle](../images/2022-03-06-PythonDapp/initTruffle.PNG)
 
 커맨드 창에 "truffle init"을 입력해주어서 truffle에서 제공하는 프레임을 받아줍니다.
 
 <br/>
 
-![CheckInit](../images/2022-03-06-Blockchain/CheckInit.PNG)
+![CheckInit](../images/2022-03-06-PythonDapp/CheckInit.PNG)
 
 정상적으로 되셨다면 이런 출력과 디렉터리가 나오실겁니다.
 
 <br/>
 
-![compilersVersion](../images/2022-03-06-Blockchain/compilersVersion.PNG)
+![compilersVersion](../images/2022-03-06-PythonDapp/compilersVersion.PNG)
 
 최상위에 있는 "truffle-config.js"를 열어준 후 컴파일러의 버전을 0.5.7로 변경해줍니다.
 
@@ -278,7 +278,7 @@ contract greeter{
 
 <br/>
 
-![comfileTruffle](../images/2022-03-06-Blockchain/comfileTruffle.PNG)
+![comfileTruffle](../images/2022-03-06-PythonDapp/comfileTruffle.PNG)
 
 이제 추가한 "greet.sol"을 컴파일을 해주기 위해 터미널에 "truffle comfile"을 입력해줍니다.
 
@@ -287,7 +287,7 @@ contract greeter{
 
 ## 3.2 스마트 컨트랙트 배포 (deploy.py)
 
-![createDeploy](../images/2022-03-06-Blockchain/createDeploy.PNG)
+![createDeploy](../images/2022-03-06-PythonDapp/createDeploy.PNG)
 
 deploy.py 만들어 준 후 아래의 코드를 넣어줍니다.
 
@@ -329,25 +329,25 @@ print("Contract Deployed At:", tx_receipt['contractAddress'])
 
 <br/>
 
-![infura5](../images/2022-03-06-Blockchain/infura5.PNG)
+![infura5](../images/2022-03-06-PythonDapp/infura5.PNG)
 
 infura API Key는 이거입니다. 본인 것으로 입력해주셔야합니다!
 
 <br/>
 
-![private1](../images/2022-03-06-Blockchain/privateKey1.PNG)
+![private1](../images/2022-03-06-PythonDapp/privateKey1.PNG)
 
 Metamask private Key를 보기위해선 먼저 Metamask에서 "계정 세부 정보"를 눌러줍니다.
 
 <br/>
 
-![private1](../images/2022-03-06-Blockchain/privateKey2.PNG)
+![private1](../images/2022-03-06-PythonDapp/privateKey2.PNG)
 
 누르시면 해당 버튼들이 보이실 텐데 "비공개 키 내보내기"를 눌러 주신 후 비밀번호를 입력하시면 Metamask private Key를 받아보실 수 있습니다.
 
 <br/>
 
-![deployContract](../images/2022-03-06-Blockchain/deployContract.PNG)
+![deployContract](../images/2022-03-06-PythonDapp/deployContract.PNG)
 
 수정한 후 오른쪽 위 실행 버튼을 누르시거나 "python deploy.py"를 실행시켜 스마트 컨트랙트의 주소를 받습니다.
 
@@ -358,7 +358,7 @@ Metamask private Key를 보기위해선 먼저 Metamask에서 "계정 세부 정
 
 ## 3.3 스마트 컨트랙트를 DB로 사용한, 플라스크 프레임 워크 웹 만들기 (app.py)
 
-![createApp](../images/2022-03-06-Blockchain/createApp.PNG)
+![createApp](../images/2022-03-06-PythonDapp/createApp.PNG)
 
 app.py파일을 만들어 준 후 아래의 코드를 넣어줍니다.
 
@@ -448,7 +448,7 @@ private key, wallet address는 배포한 지갑계정으로 하셔도 되고 안
 
 <br/>
 
-![createIndex](../images/2022-03-06-Blockchain/createIndex.PNG)
+![createIndex](../images/2022-03-06-PythonDapp/createIndex.PNG)
 
 해당 코드를 /templates/index.html로 저장합니다.
 
@@ -505,7 +505,7 @@ css도 참고한 블로그에서 제공한 css를 사용하겠습니다.
 
 <br/>
 
-![createCss](../images/2022-03-06-Blockchain/creatCss.PNG)
+![createCss](../images/2022-03-06-PythonDapp/creatCss.PNG)
 
 css는 \static\css\style.css로 저장합니다.
 
@@ -514,25 +514,25 @@ css는 \static\css\style.css로 저장합니다.
 
 ## 3.4 테스트
 
-![startApp](../images/2022-03-06-Blockchain/startApp1.PNG)
+![startApp](../images/2022-03-06-PythonDapp/startApp1.PNG)
 
 이제 app.py를 실행해보겠습니다. 명령어 "py app.py"또는 우측 상단 실행버튼을 눌러주세요.
 
 <br/>
 
-![startApp](../images/2022-03-06-Blockchain/startApp2.PNG)
+![startApp](../images/2022-03-06-PythonDapp/startApp2.PNG)
 
 에러 없이 잘 실행이 되었다면 맨 아래 주소가 있는데 주소를 "컨트로+클릭" 해주시면 브라우저가 열리게 됩니다.
 
 <br/>
 
-![greetDapp1](../images/2022-03-06-Blockchain/greetDapp1.PNG)
+![greetDapp1](../images/2022-03-06-PythonDapp/greetDapp1.PNG)
 
 처음 화면에는 컨트랙트에 저장된 값이 없기 때문에 아무런 문자열이 출력되지 않은 것을 볼 수 있습니다.
 
 <br/>
 
-![greetDapp1](../images/2022-03-06-Blockchain/greetDapp2.PNG)
+![greetDapp1](../images/2022-03-06-PythonDapp/greetDapp2.PNG)
 
 그러면 "Hello Word!"를 입력 후 Greet을 눌러보겠습니다.
 
@@ -540,7 +540,7 @@ css는 \static\css\style.css로 저장합니다.
 
 <br/>
 
-![greetDapp1](../images/2022-03-06-Blockchain/greetDapp3.PNG)
+![greetDapp1](../images/2022-03-06-PythonDapp/greetDapp3.PNG)
 
 로딩이 다 끝나면 "Hello Word!"문자열이 출력되는 것을 보실 수 있습니다.
 
