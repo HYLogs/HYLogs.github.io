@@ -5,6 +5,12 @@ toc: true
 toc_sticky: true
 categories: 
     - BlockChain
+tags: 
+    - web3.py
+    - solidity
+    - flask
+    - infura
+    - smartcontract
 ---
 
 해당 글은 web3.py로 Dapp을 구현하기 위해 자료조사 중 web3.js에 비해 자료가 너무 없어서 제가 알고 있는 범위에서 최대한 설명드리는 글이며 해외 블로그를 보고 한글로 설명이 되었으면 좋겠다라고 생각하여 작성하였습니다.
