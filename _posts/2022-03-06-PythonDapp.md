@@ -15,9 +15,7 @@ tags:
     - ethereum
 ---
 
-해당 글은 web3.py로 Dapp을 구현하기 위해 자료조사 중 web3.js에 비해 자료가 너무 없어서 제가 알고 있는 범위에서 최대한 설명드리는 글이며 해외 블로그를 보고 한글로 설명이 되었으면 좋겠다라고 생각하여 작성하였습니다.
-
-참고한 블로그는 맨 하단에 기재하였습니다. 글을 처음 작성해서 문제가 될 시 지우겠습니다
+참고한 블로그는 맨 하단에 기재하였습니다.
 
 # 1. 준비물
 - Visual Studio Code
@@ -129,7 +127,7 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 
 ![install_flask](/images/2022-03-06-PythonDapp/install_flask.PNG)
 
-"pip install falsk" 립력 후 설치.
+"pip install falsk" 입력 후 설치.
 
 <br/>
 <br/>

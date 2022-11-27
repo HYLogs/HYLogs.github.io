@@ -16,12 +16,12 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "HYNote"
+title                    : "HY.Log"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "이한영"
-description              : "컴공의 메모장"
-url                      : "https://dkdlel644.github.io"
+description              : "MyLog"
+url                      : "https://HYLog.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "이한영"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "컴공의 메모장"
+  bio              : "한경국립대"
   location         : "South Korea"
   email            :
   links:
