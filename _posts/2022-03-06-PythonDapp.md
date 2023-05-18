@@ -33,7 +33,7 @@ tags:
 
 다른 에디터가 있으신 분들은 해당 에디터를 사용하셔도 됩니다.
 
-![instaall_VSCode](/images/2022-03-06-PythonDapp/Install_VSCode.PNG)
+![install_VSCode](/images/2022-03-06-PythonDapp/Install_VSCode.PNG)
 
 먼저 https://code.visualstudio.com/download 에서 본인 OS에 맞게 다운로드를 해줍니다.
 
@@ -59,13 +59,13 @@ VScode를 설치한 후 python 확장팩을 설치해줍니다.
 
 저는 Remix 사이트가 테스트하기도 편해서 Remix를 이용합니다.
 
-Remix: https://remix.ethereum.org/
+Remix: <https://remix.ethereum.org/>
 
 <br/>
 <br/>
 
 ## 2.2 python 설치
-저는 python 3.8.2 버전을 사용했지만 2.7이산 버전이면 문제는 없을것으로 보입니다.
+저는 python 3.8.2 버전을 사용했지만 2.7이상 버전이면 문제는 없을것으로 보입니다.
 
 기존에 다른 버전 python이 있으신 분은 굳이 버전을 안바꾸셔도 괜찮을 것 같습니다.
 
@@ -73,7 +73,7 @@ Remix: https://remix.ethereum.org/
 
 (참조한 사이트에선 2.7이상 버전을 추천하는 것 같습니다.)
 
-https://www.python.org/downloads/
+<https://www.python.org/downloads/>
 
 <br/>
 <br/>
@@ -85,7 +85,7 @@ Truffle 프레임 워크 사용을 하기 때문에 node.js를 설치 해줍니�
 
 node.js 홈페이지를 검색하셔서 다운로드 해주세요. 링크도 걸어두겠습니다.
 
-Node.js: https://nodejs.org/ko/
+Node.js: <https://nodejs.org/ko/>
 
 <br/>
 <br/>
@@ -101,7 +101,7 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 <br/>
 
 ## 2.5 web3.py 설치
-파이썬에서 스마트컨트랙트를 쉽게 이용할 수 있게 함수들을 만들어 놓은 web3.py를 설치해주어야합니다.
+파이썬에서 스마트컨트랙트를 쉽게 이용할 수 있게 함수들을 만들어 놓은 web3.py를 설치해 주어야 합니다.
 
 ![install_pip](/images/2022-03-06-PythonDapp/install_pip.PNG)
 
@@ -123,11 +123,11 @@ Truffle은 솔리디티 언어로 작성된 파일를 컴파일해주고 컨트�
 <br/>
 
 ## 2.6 flask 설치
-스마트 컨트랙트에 데이터를 넣고 확인하는 방법을 브라우저로 확인하기 위해서 웹 프레임 워크인 falsk를 설치해줍니다.
+스마트 컨트랙트에 데이터를 넣고 확인하는 방법을 브라우저로 확인하기 위해서 웹 프레임 워크인 flask를 설치해줍니다.
 
 ![install_flask](/images/2022-03-06-PythonDapp/install_flask.PNG)
 
-"pip install falsk" 입력 후 설치.
+"pip install flask" 입력 후 설치.
 
 <br/>
 <br/>
@@ -194,7 +194,7 @@ Metamask를 열어 주신 다음에 빨간 네모칸을 눌러주시면 지갑 �
 ## 2.8 Infura API 키 발급
 테스트넷과 쉽게 연결해주는 Infura API를 발급 받아 보겠습니다.
 
-먼저 https://infura.io/ 에서 회원가입을 해줍니다.
+먼저 <https://infura.io/> 에서 회원가입을 해줍니다.
 
 ![infura1](/images/2022-03-06-PythonDapp/infura1.PNG)
 
@@ -341,7 +341,7 @@ print("Contract Deployed At:", tx_receipt['contractAddress'])
 
 ![infura5](/images/2022-03-06-PythonDapp/infura5.PNG)
 
-infura API Key는 이거입니다. 본인 것으로 입력해주셔야합니다!
+infura API Key는 빨간 박스입니다. 본인 것으로 입력해주셔야합니다!
 
 <br/>
 
@@ -427,9 +427,11 @@ deployed contract address는 아까 deploy.py에서 배포 후 출력된 주소�
 
 private key, wallet address는 배포한 지갑계정으로 하셔도 되고 안하셔도 됩니다만, 동일 지갑계정으로 작성해주시고 테스트넷에 이더만 있으면 됩니다.
 
-<br/>
+<br/>  
 
+<!-- liquid문법 사용시 raw로 에러방지 -->
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html>
 
@@ -442,8 +444,8 @@ private key, wallet address는 배포한 지갑계정으로 하셔도 되고 안
 
 <body class="is-preload">
    <div class="main" style="text-align: center;">
-      <h1>{{greeting }}</h1>
-      <form method="post" action="{{url_for('greet')}}">
+      <h1>{{ greeting }}</h1>
+      <form method="post" action="{{ url_for('greet') }}">
          <input type="text" style="width: 50%;" name="write" placeholder="Write Your Greeting Here.."></br>
          <input class="button" type="submit" value="Greet">
          <br>
@@ -452,6 +454,7 @@ private key, wallet address는 배포한 지갑계정으로 하셔도 되고 안
 </body>
 
 </html>
+{% endraw %}
 ```
 
 웹으로 보여줄 html이 필요한데 참고한 블로그에서 제공한 html을 사용하겠습니다.
@@ -532,7 +535,7 @@ css는 \static\css\style.css로 저장합니다.
 
 ![startApp](/images/2022-03-06-PythonDapp/startApp2.PNG)
 
-에러 없이 잘 실행이 되었다면 맨 아래 주소가 있는데 주소를 "컨트로+클릭" 해주시면 브라우저가 열리게 됩니다.
+에러 없이 잘 실행이 되었다면 맨 아래 주소가 있는데 주소를 "ctrl+클릭" 해주시면 브라우저가 열리게 됩니다.
 
 <br/>
 

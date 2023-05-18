@@ -14,3 +14,13 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs:
+  - title: Code
+    children:
+      - title: "BlockChain"
+        category: "BlockChain"
+        url: /categories/BlockChain/
+      - title: "AI"
+        category: "AI"
+        url: /categories/AI/
