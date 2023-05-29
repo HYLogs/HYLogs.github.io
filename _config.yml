@@ -106,7 +106,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "한경국립대"
   location         : "South Korea"
-  email            :
+  email            : "dkdlel644@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

@@ -21,6 +21,9 @@ docs:
       - title: "BlockChain"
         category: "BlockChain"
         url: /categories/BlockChain/
+      - title: "Spring"
+        category: "Spring"
+        url: /categories/Spring/
       - title: "AI"
         category: "AI"
         url: /categories/AI/
