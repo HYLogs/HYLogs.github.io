@@ -70,7 +70,6 @@ spring:
 <br>
 
 # code 수정
-
 ## Member
 
 ``` java
@@ -103,6 +102,21 @@ public class Member {
 ```
 
 기존 Member는 Email이 있었는데 Github는 Email값을 사용자가 따로 설정하지 않는다면 null값을 반환하기 때문에 Resource Server에서 공통적으로 제공하는 `provider`, `providerId`값을 이용해서 사용자 검색용 column을 생성해줍니다.
+
+<br>
+<br>
+
+## MemberRepository
+
+``` java
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    public Member getOne(Long id);
+    public List<Member> findByMemberProviderId(String MemberProviderId);
+}
+```
+
+기존 `Email`로 찾는 방식말고 `MemberProviderId`로 찾는 메서드를 생성해줍니다.
 
 <br>
 <br>
@@ -196,7 +210,6 @@ public class OAuth2MemberService extends DefaultOAuth2UserService {
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         OAuth2User oAuth2User = super.loadUser(userRequest);
 
-        System.out.println(oAuth2User.getAttributes());
         // name 생성
         String provider = userRequest.getClientRegistration().getRegistrationId(); //google
         String providerId = oAuth2User.getAttribute("sub");
