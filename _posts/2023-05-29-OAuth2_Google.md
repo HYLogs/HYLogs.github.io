@@ -11,12 +11,13 @@ tags:
     - Security
     - OAuth2.0
     - Social Login
+    - Google
 ---
 
 # 프로젝트 전체 구조    
 시작하기 앞서 최종 산출물의 구조를 보여드리겠습니다.   
 
-![structure](/images/2023-05-29-OAuth2.0/2023-05-29-02-48-07.png) 
+![structure](/images/2023-05-29-OAuth2_Google/2023-05-29-02-48-07.png) 
 
 <br>
 <br>
@@ -47,14 +48,14 @@ dependencies {
 # Google Oauth 2.0    
 ## Client ID 발급
 
-![GCP_step1](/images/2023-05-29-OAuth2.0/2023-05-29-03-05-43.png)   
+![GCP_step1](/images/2023-05-29-OAuth2_Google/2023-05-29-03-05-43.png)   
 
 [구글 클라우드(GCP)](https://console.cloud.google.com/?hl=ko)로 이동해서 빨간 박스 부분을 눌러 줍니다.
 
 <br>
 <br>
 
-![GCP_step2](/images/2023-05-29-OAuth2.0/2023-05-29-03-12-57.png)
+![GCP_step2](/images/2023-05-29-OAuth2_Google/2023-05-29-03-12-57.png)
 
 
 누르면 아래와 같은 화면이 나올텐데요. 오른쪽 위 `새 프로젝트`를 클릭해줍니다.
@@ -62,28 +63,28 @@ dependencies {
 <br>
 <br>
 
-![GCP_step3](/images/2023-05-29-OAuth2.0/2023-05-29-03-15-03.png)   
+![GCP_step3](/images/2023-05-29-OAuth2_Google/2023-05-29-03-15-03.png)   
 
 프로젝트 이름을 작성한 뒤 만들기를 눌러주세요.
 
 <br>
 <br>
 
-![GCP_step4](/images/2023-05-29-OAuth2.0/2023-05-29-03-17-31.png)   
+![GCP_step4](/images/2023-05-29-OAuth2_Google/2023-05-29-03-17-31.png)   
 
 만드셨다면 왼쪽 상단에 프로젝트 이름이 방금 생성한 것과 동일한지 확인 후 `API 및 서비스 > OAuth 동의 화면`을 눌러주세요.
 
 <br>
 <br>
 
-![GCP_step5](/images/2023-05-29-OAuth2.0/2023-05-29-03-20-33.png)
+![GCP_step5](/images/2023-05-29-OAuth2_Google/2023-05-29-03-20-33.png)
 
 `외부`로 해주신 뒤 만들기를 눌러주세요.
 
 <br>
 <br>
 
-![GCP_step6](/images/2023-05-29-OAuth2.0/2023-05-29-03-25-38.png)
+![GCP_step6](/images/2023-05-29-OAuth2_Google/2023-05-29-03-25-38.png)
 
 `앱 이름`: 나중에 구글 로그인할 때 화면에 띄어주는 이름입니다.   
 `사용자 인증 이메일`: 해당 프로젝트의 문의 메일입니다. 만약 실제로 운영한다면 대표 이메일을 작성하시면 됩니다.   
@@ -92,14 +93,14 @@ dependencies {
 <br>
 <br>
 
-![GCP_step7](/images/2023-05-29-OAuth2.0/2023-05-29-03-32-23.png)
+![GCP_step7](/images/2023-05-29-OAuth2_Google/2023-05-29-03-32-23.png)
 
 현재는 테스트이기 때문에 도메인은 비워두고 `개발자 이메일`만 적어주시고 저장후 계속해주세요.
 
 <br>
 <br>
 
-![GCP_step7](/images/2023-05-29-OAuth2.0/2023-05-29-03-35-17.png)
+![GCP_step7](/images/2023-05-29-OAuth2_Google/2023-05-29-03-35-17.png)
 
 다음은 범위입니다. 저희 프로젝트가 로그인하는 사용자의 정보를 어느정도의 범위로 가져롱 것인지를 정하는 단계입니다.   
 범위 추가 또는 삭제를 눌러주세요.
@@ -107,7 +108,7 @@ dependencies {
 <br>
 <br>
 
-![GCP_step8](/images/2023-05-29-OAuth2.0/2023-05-29-03-36-20.png)
+![GCP_step8](/images/2023-05-29-OAuth2_Google/2023-05-29-03-36-20.png)
 
 간단하게 사용자의 email과 profile만 가져오겠습니다.   
 저장 후 계속해주세요.
@@ -120,21 +121,21 @@ dependencies {
 <br>
 <br>
 
-![GCP_step9](/images/2023-05-29-OAuth2.0/2023-05-29-03-40-28.png)
+![GCP_step9](/images/2023-05-29-OAuth2_Google/2023-05-29-03-40-28.png)
 
 마지막으로 요약보고 맞는지 확인 후 왼쪽 `사용자 인증 정보`를 눌러줍니다.
 
 <br>
 <br>
 
-![GCP_step10](/images/2023-05-29-OAuth2.0/2023-05-29-03-43-10.png)
+![GCP_step10](/images/2023-05-29-OAuth2_Google/2023-05-29-03-43-10.png)
 
 `사용자 인증 정보 만들기 > OAuth 클라이언트 ID`를 눌러줍니다.
 
 <br>
 <br>
 
-![GCP_step11](/images/2023-05-29-OAuth2.0/2023-05-29-03-46-38.png)
+![GCP_step11](/images/2023-05-29-OAuth2_Google/2023-05-29-03-46-38.png)
 
 `애플리케이션`: 웹 애플리케이션   
 `이름`: 본인이 식별할 이름   
@@ -145,7 +146,7 @@ dependencies {
 <br>
 <br>
 
-![GCP_step12](/images/2023-05-29-OAuth2.0/2023-05-29-03-51-12.png)
+![GCP_step12](/images/2023-05-29-OAuth2_Google/2023-05-29-03-51-12.png)
 
 생성한 클라이언트 ID와 클라이언트 보안 비밀번호를 
 
@@ -344,9 +345,9 @@ github에 올라갈 땐 `application-oauth.yaml`을 .gitignore에 등록해줍�
 # Service
 ## OAuth2MemberService
 
-> OAuth2MemberService Class
+> OAuth2MemberService Class   
 > ```java
-> @Service
+> @Service 
 > @RequiredArgsConstructor
 > @Transactional(readOnly = true)
 > public class OAuth2MemberService extends DefaultOAuth2UserService {
@@ -380,6 +381,7 @@ github에 올라갈 땐 `application-oauth.yaml`을 .gitignore에 등록해줍�
 >         return new PrincipalDetails(member,  oAuth2User.getAttributes());
 >     }
 > }
+> ```
 
 `OAuth2MemberService`은 로그인한 정보를 받아서 DB에 저장하거나 기존에 있는 사용자라면 DB에서 불러온 뒤 `PrincipalDetails`을 반환해 줍니다.
 
@@ -582,29 +584,28 @@ HTML은 매우 간단하게 작성했습니다. 여기서 중요한 것은 `xmln
 
 > 로그인 전
 > 
-> ![로그인 전](/images/2023-05-29-OAuth2.0/2023-05-29-05-15-52.png)
+> ![로그인 전](/images/2023-05-29-OAuth2_Google/2023-05-29-05-15-52.png)
 
 
 > 로그인 후
-> ![로그인 후](/images/2023-05-29-OAuth2.0/2023-05-29-05-19-04.png)
+> 
+> ![로그인 후](/images/2023-05-29-OAuth2_Google/2023-05-29-05-19-04.png)
 
 > DB
-> ![DB](/images/2023-05-29-OAuth2.0/2023-05-30-06-52-57.png)
+> 
+> ![DB](/images/2023-05-29-OAuth2_Google/2023-05-30-06-52-57.png)
 
 <br>
 <br>
+   
+Github   
 
-전체 소스 코드   
-OAuth2.0 깃허브(클릭)   
-<a href="https://github.com/HYLogs/OAuth2.0">
-      <img src="https://opengraph.githubassets.com/02486bea4254e0d05efe00a38961793b80ef9830a584cf5662faa16aa61be6c1/HYLogs/OAuth2.0" width="200" height="100"/>
-</a>
+<https://github.com/HYLogs/OAuth2.0/tree/GoogleOAuth>
 
 <br>
 <br>
 
 참고   
-스프링부트 시큐리티 & JWT 강의(클릭)   
-<a href="https://inf.run/Legg">
-      <img src="https://cdn.inflearn.com/public/courses/328073/cover/c5cb036f-b0e5-4c82-9807-89052dc68286/328073-eng.png" width="200" height="100"/>
-</a>
+스프링부트 시큐리티 & JWT 강의   
+ 
+<https://inf.run/Legg>
